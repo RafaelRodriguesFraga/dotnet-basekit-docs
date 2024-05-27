@@ -1,0 +1,33 @@
+---
+title: Full Appsettings Configuration
+label: Full Appsettings Config
+order: 3;
+---
+
+Here you can see all of the configuration of `appsettings.json`: 
+
+```json #
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+
+  "SelectedDatabase": "MySql | SqlServer | Postgres",
+  "ConnectionStrings": {
+    "PostgresConnection": "Host=localhost;Port=5432;Database=your_database;Username=your_database;Password=postgres;",
+    "MySqlConnection": "Server=localhost;Database=your_database;User=your_user;Password=your_user;",
+    "SqlServerConnection": "Server=localhost;Database=test;User Id=sa;Password=your_password;"
+  },
+
+  "MongoSettings": {
+    "DatabaseName": "mongo_database_name",
+    "ConnectionString": "mongo_connection_strng"
+  },  
+
+  "AllowedOrigins": "*",
+  "AllowedHosts": "*"
+}
+```

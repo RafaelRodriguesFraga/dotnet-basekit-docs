@@ -1,0 +1,6 @@
+input: .
+output: .retype
+branding:
+  title: Dotnet BaseKit  
+footer:
+  copyright: "&copy; Copyright Dotnet BaseKit {{ year }}. All rights reserved."
