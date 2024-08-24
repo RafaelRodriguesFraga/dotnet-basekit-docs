@@ -63,7 +63,7 @@ namespace YourNamespace.Dtos
 
         public override void Validate()
         {
-            var validation = new ProductDtoContract();
+            var validation = new YourDtoContract();
             var validationResult = validation.Validate(this);
 
             AddNotifications(validationResult);            
@@ -113,7 +113,7 @@ namespace YourNamespace.Application.Services
 }
 ```
 
-When the YourDto data is validated and an error occurs, the Validate() method will flag the DTO as invalid. The validation errors defined in `YourDtoContract` will be added to the notification context.
+When the `YourDto` data is validated and an error occurs, the `Validate()` method will flag the DTO as invalid. The validation errors defined in `YourDtoContract` will be added to the notification context.
 
 In your API requests, if any of these errors occur, the response will look like this:
 

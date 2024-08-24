@@ -4,9 +4,9 @@ label: Infra.Sql
 order: 5;
 ---
 
-Overview
+## Overview
 
-The `DotnetBaseKit.Components.Infra.Sq` layer is a crucial part of the DotnetBaseKit architecture, designed to handle the data access logic for SQL databases. It provides a base context for Entity Framework Core, along with repository implementations for standard CRUD operations. This layer promotes the separation of concerns by encapsulating data access logic and offering reusable components for managing SQL database interactions.
+The `DotnetBaseKit.Components.Infra.Sql` layer is a crucial part of the DotnetBaseKit architecture, designed to handle the data access logic for SQL databases. It provides a base context for Entity Framework Core, along with repository implementations for standard CRUD operations. This layer promotes the separation of concerns by encapsulating data access logic and offering reusable components for managing SQL database interactions.
 
 ## Installation
 
@@ -93,7 +93,7 @@ namespace YourNamespace.Context
 }
 ```
 
-You have to add `modelBuilder.Ignore<Notification>()`, otherwise it will throw an error. In future releases this will be fixed. For fully usage of the `Infra.Sql` see the [Fully Usage Example](../../how-to-use/fully-example) or [Database Configuration](../../getting-started/database-configuration).
+You have to add `modelBuilder.Ignore<Notification>()`, otherwise it will throw an error. In future releases this will be fixed. For fully usage of the `Infra.Sql` see the [Fully Usage Example](../../how-to-use/fully-example) or [SQL Database Configuration](../configuration/sql-dabatase-config).
 
 Create a Write/Read Repository: 
 

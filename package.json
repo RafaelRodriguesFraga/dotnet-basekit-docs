@@ -4,7 +4,6 @@
     "build": "retype build"
   },
   "dependencies": {
-    "retypeapp-darwin-x64": "^3.5.0"
+    "retypeapp-win-x64": "^3.5.0"
   }
-
 }

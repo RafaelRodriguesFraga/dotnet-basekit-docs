@@ -64,10 +64,9 @@ namespace YourNamespace.Application.Services
 
         public YourServiceApplication(
             NotificationContext notificationContext, 
-            IYourSqlReadRepository yourSqlReadRepository) : base(notificationContext)
-        {
-            _yourSqlWriteRepository = yourSqlWriteRepository;
-            _yourSqlReadRepository = yourSqlReadRepository;
+            IYourReadRepository yourReadRepository) : base(notificationContext)
+        {           
+            _yourReadRepository = yourReadRepository;
         }
 
         public async Task<PaginationResponse<YourClass>> GetAllPaginatedAsync(int currentPage, int quantityPerPage)

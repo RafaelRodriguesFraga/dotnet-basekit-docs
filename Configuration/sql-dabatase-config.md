@@ -32,11 +32,11 @@ After creating your Database Context ([see here](../components/infra-sql/#usage)
 
 ### Detailed Configuration
 
-DotnetBaseKit offers support for PostgreSQL, MySQL, and SQL Server in this version. You can choose any of these databases by setting the SelectedDatabase property to Postgres, MySql, or SqlServer. Each database has its own connection string property as described below:
+DotnetBaseKit offers support for PostgreSQL, MySQL, and SQL Server in this version. You can choose any of these databases by setting the `SelectedDatabase` property to Postgres, MySql, or SqlServer. Each database has its own connection string property as described below:
 
 ### PostgreSQL Configuration
 
-To use PostgreSQL, set SelectedDatabase to Postgres and provide the connection details under PostgresConnection.
+To use PostgreSQL, set `SelectedDatabase` to Postgres and provide the connection details under PostgresConnection.
 
 ```json #
 {
@@ -49,7 +49,7 @@ To use PostgreSQL, set SelectedDatabase to Postgres and provide the connection d
 
 ### MySQL Configuration
 
-To use MySQL, set SelectedDatabase to MySql and provide the connection details under MySqlConnection.
+To use MySQL, set `SelectedDatabase` to MySql and provide the connection details under MySqlConnection.
 
 ```json #
 {
@@ -62,7 +62,7 @@ To use MySQL, set SelectedDatabase to MySql and provide the connection details u
 
 ### SQL Server Configuration
 
-To use SQL Server, set SelectedDatabase to SqlServer and provide the connection details under SqlServerConnection.
+To use SQL Server, set `SelectedDatabase` to SqlServer and provide the connection details under SqlServerConnection.
 
 ```json #
 {
@@ -73,4 +73,4 @@ To use SQL Server, set SelectedDatabase to SqlServer and provide the connection 
 }
 ```
 
-You can switch between the databases by changing the value of SelectedDatabase to either Postgres, MySql, or SqlServer as needed. Each setting will ensure that the correct connection string is used for your selected database.
+You can switch between the databases by changing the value of `SelectedDatabase` to either Postgres, MySql, or SqlServer as needed. Each setting will ensure that the correct connection string is used for your selected database.

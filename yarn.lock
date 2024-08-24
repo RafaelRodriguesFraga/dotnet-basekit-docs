@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-retypeapp-darwin-x64@^3.5.0:
+retypeapp-win-x64@^3.5.0:
   version "3.5.0"
-  resolved "https://registry.yarnpkg.com/retypeapp-darwin-x64/-/retypeapp-darwin-x64-3.5.0.tgz#67b18fdbf60af4b1e46af419f2dc7f8cdcb6cd89"
-  integrity sha512-N+jo/nfTDYlow6qZA9TbHTYqCYXMBgLyft30FMDpXGe4/OMy61CtOodIxUiHhMZfBwCQlgy9u4nZuNZTDYudBA==
+  resolved "https://registry.yarnpkg.com/retypeapp-win-x64/-/retypeapp-win-x64-3.5.0.tgz#2ba7bf55c26ac78a3b5d027089135983b880760a"
+  integrity sha512-II9fqg6gBBiCdlJ2n5EB89dNusgko9D2qKXaqCgCPuNOS7c7rMgL5bORt3r8mVWbL25gC1U+40KNuchYuzUpvQ==

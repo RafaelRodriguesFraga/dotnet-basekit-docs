@@ -42,7 +42,7 @@ services.AddMongoDb(Configuration);
 
 ## Usage
 
-The primary purpose is to manage MongoDB and provide access to the database. Developers can configure MongoDB connections and perform database operations with the `IMongoSettings` interface and `MongoSettings` class. To see the configuration, go to [MongoDB Configuration](../../how-to-use/mongodb-configuration).
+The primary purpose is to manage MongoDB and provide access to the database. Developers can configure MongoDB connections and perform database operations with the `IMongoSettings` interface and `MongoSettings` class. To see the configuration, go to [MongoDB Configuration](../configuration/mongodb-database-config).
 
 With the database configured, you can use the `Infra.MongoDb` component. 
 

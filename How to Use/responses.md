@@ -6,7 +6,7 @@ order: 1;
 
 ## Overview
 
-These response methods are part of the DotnetBaseKit.Components.Api library. For detailed information on installation and usage, please refer to the [Api in Components Section](../Components/api).
+These response methods are part of the `DotnetBaseKit.Components.Api` library. For detailed information on installation and usage, please refer to the [Api in Components Section](../components/api).
 
 DotnetBaseKit.Components.Api offers a suite of methods designed to enhance the readability and structure of your API responses, including `CreateResponse`, `ResponseCreated()`, `ResponseOk()`(and others variations), and `ResponseBadRequest()`. These methods simplify the process of generating consistent and meaningful HTTP responses across your application.
 
@@ -122,7 +122,7 @@ namespace YourNamespace.Api.Controllers
 }
 ```
 
-In this example, the `GetByIdAsync()` method is called from a service, and the result is passed to the ResponseOk method.
+In this example, the `GetByIdAsync()` method is called from a service, and the result is passed to the `ResponseOk` method.
 
 If there are no errors, the response will look like this:
 
@@ -185,7 +185,7 @@ namespace YourNamespace.Api.Controllers
 }
 ```
 
-In this example, the `GetAllAsync` method is called from a service, and the result is passed to the ResponseOk method.
+In this example, the `GetAllAsync` method is called from a service, and the result is passed to the `ResponseOk` method.
 
 If there are no errors, the response will look like this:
 

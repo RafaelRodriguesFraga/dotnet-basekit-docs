@@ -66,6 +66,6 @@ In this package there's a `PaginationResponse` class. You can see how to use her
 
 [!ref Go to Pagination](/how-to-use/pagination)
 
-In practice, developers can create new service applications by inheriting from the BaseServiceApplication class and implementing the necessary business logic specific to their use case. The constructor ensures that each service application instance has access to a shared NotificationContext instance for handling notifications.
+In practice, developers can create new service applications by inheriting from the `BaseServiceApplication` class and implementing the necessary business logic specific to their use case. The constructor ensures that each service application instance has access to a shared `NotificationContext` instance for handling notifications.
 
 

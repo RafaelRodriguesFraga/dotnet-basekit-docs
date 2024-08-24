@@ -15,4 +15,4 @@ For MongoDB, you do not need to create a `DbContext`. Instead, you can configure
 }
 ```
 
-This configuration is all you need to connect to your MongoDB database. Adjust the DatabaseName and ConnectionString as necessary to match your MongoDB setup.
+This configuration is all you need to connect to your MongoDB database. Adjust the `DatabaseName` and `ConnectionString` as necessary to match your MongoDB setup.

@@ -36,11 +36,11 @@ namespace YourNamespace.Infra.Configurations
             builder.Property(x => x.Field1)
                 .HasMaxLength(100)
                 .IsRequired()
-                .HasColumnName("credit_card_name");
+                .HasColumnName("^field_1");
 
             builder.Property(x => x.Field2)                
                 .IsRequired()
-                .HasColumnName("field_1");
+                .HasColumnName("field_2");
         }
     }
 }
@@ -54,17 +54,12 @@ select "Field1" from "your_table"
 ```
 
 To avoid this, explicitly choose names for your columns and tables, as demonstrated above.
+
 ## Important Notes
 
    **1. Ignored Properties:** In this version of BaseKit, you must ignore the properties `Notifications`, `Invalid`, and `Valid` in every entity to prevent errors. This will be fixed in future updates.
 
-   **2. Naming Recommendations:** We recommend using lowercase and snake_case for your fields, especially `id` and `created_at` (inherited from BaseEntity).
- 
-## Explanation
-
-In this version of the BaseKit you have to ignore these first three properties in every single entity (`Notifications`, Invalid` and `Valid`) or otherwise will throw an error. This will be fixed soon.
-
-The other thing is that we recommend in this version to put your fields in lowercase and snake_case, mainly `id` and `created_at` (they come from `BaseEntity`).
+   **2. Naming Recommendations:** We recommend using lowercase and snake_case for your fields, especially `id` and `created_at` (inherited from `BaseEntity`). 
 
 ## FluentAPI Methods
 

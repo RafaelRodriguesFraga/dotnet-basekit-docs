@@ -50,9 +50,9 @@ namespace YourNamespace.Entities
 }
 ```
 
-In this example, the `Product` class inherits from `BaseEntity` and implements its Validate() method to perform custom validation logic specific to the Product.
+In this example, the `Product` class inherits from `BaseEntity` and implements `Validate()` method to perform custom validation logic specific to the Product.
 
-Similarly, consider a DTO named ProductDto representing product data transferred between layers of the application. We can define the ProductDto class as follows:
+Similarly, consider a DTO named `ProductDto` representing product data transferred between layers of the application. We can define the ProductDto class as follows:
 
 ```csharp #
 using DotnetBaseKit.Components.Domain.Sql.Dtos.Base;
@@ -73,7 +73,7 @@ namespace YourNamespace.Dtos
 }
 ```
 
-In this example, the ProductDto class inherits from BaseDto and implements its Validate() method to perform custom validation logic specific to the ProductDto.
+In this example, the `ProductDto` class inherits from `BaseDto` and implements its `Validate()` method to perform custom validation logic specific to the `ProductDto`.
 
 By utilizing the `BaseEntity` and `BaseDto` classes in this manner, developers can ensure consistent validation and notification handling within the SQL domain of the application.
 

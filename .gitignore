@@ -1,3 +1,4 @@
+node_modules
 node_modules/.yarn-integrity
 node_modules/.bin/retype
 node_modules/retypeapp-darwin-x64/LICENSE
