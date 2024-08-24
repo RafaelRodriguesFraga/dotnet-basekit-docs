@@ -1,6 +1,6 @@
 ---
 title: Welcome to DotnetBaseKit
-sidebar_position: 1
+order: 1
 icon: "home"
 label: Welcome
 ---
