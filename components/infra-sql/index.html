@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.770084154042">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.777831510911">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -11,7 +11,7 @@
     <!-- Primary Meta Tags -->
     <title>Infra.Sql Layer</title>
     <meta name="title" content="Infra.Sql Layer">
-    <meta name="description" content="Overview">
+    <meta name="description" content="The DotnetBaseKit.Components.Infra.Sql layer is a crucial part of the DotnetBaseKit architecture, designed to handle the data access logic for SQL...">
 
     <!-- Canonical -->
     <link rel="canonical" href="/components/infra-sql/">
@@ -20,22 +20,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="/components/infra-sql/">
     <meta property="og:title" content="Infra.Sql Layer">
-    <meta property="og:description" content="Overview">
+    <meta property="og:description" content="The DotnetBaseKit.Components.Infra.Sql layer is a crucial part of the DotnetBaseKit architecture, designed to handle the data access logic for SQL...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="/components/infra-sql/">
     <meta property="twitter:title" content="Infra.Sql Layer">
-    <meta property="twitter:description" content="Overview">
+    <meta property="twitter:description" content="The DotnetBaseKit.Components.Infra.Sql layer is a crucial part of the DotnetBaseKit architecture, designed to handle the data access logic for SQL...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.770084154042" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.777831510911" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.770084154042" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.777831510911" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.770084154042" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.770084154042" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.777831510911" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.777831510911" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -156,8 +156,13 @@
         <span>Infra.Sql Layer</span>
     </h1>
 </doc-anchor-target>
-<p>Overview</p>
-<p>The <code v-pre>DotnetBaseKit.Components.Infra.Sq</code> layer is a crucial part of the DotnetBaseKit architecture, designed to handle the data access logic for SQL databases. It provides a base context for Entity Framework Core, along with repository implementations for standard CRUD operations. This layer promotes the separation of concerns by encapsulating data access logic and offering reusable components for managing SQL database interactions.</p>
+<doc-anchor-target id="overview">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#overview">#</doc-anchor-trigger>
+        <span>Overview</span>
+    </h2>
+</doc-anchor-target>
+<p>The <code v-pre>DotnetBaseKit.Components.Infra.Sql</code> layer is a crucial part of the DotnetBaseKit architecture, designed to handle the data access logic for SQL databases. It provides a base context for Entity Framework Core, along with repository implementations for standard CRUD operations. This layer promotes the separation of concerns by encapsulating data access logic and offering reusable components for managing SQL database interactions.</p>
 <doc-anchor-target id="installation">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#installation">#</doc-anchor-trigger>
@@ -256,7 +261,7 @@ namespace YourNamespace.Context
     }
 }</code></pre>
 </doc-codeblock></div>
-<p>You have to add <code v-pre>modelBuilder.Ignore&lt;Notification&gt;()</code>, otherwise it will throw an error. In future releases this will be fixed. For fully usage of the <code v-pre>Infra.Sql</code> see the <a href="../../how-to-use/fully-example">Fully Usage Example</a> or <a href="../../getting-started/database-configuration">Database Configuration</a>.</p>
+<p>You have to add <code v-pre>modelBuilder.Ignore&lt;Notification&gt;()</code>, otherwise it will throw an error. In future releases this will be fixed. For fully usage of the <code v-pre>Infra.Sql</code> see the <a href="../../how-to-use/fully-example">Fully Usage Example</a> or <a href="../../configuration/sql-dabatase-config/">SQL Database Configuration</a>.</p>
 <p>Create a Write/Read Repository:</p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-csharp"><code v-pre class="language-csharp">using DotnetBaseKit.Components.Infra.Sql.Context.Base;

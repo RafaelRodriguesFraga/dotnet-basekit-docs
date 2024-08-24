@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.770084154042">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.777831510911">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.770084154042" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.777831510911" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.770084154042" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.777831510911" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.770084154042" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.770084154042" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.777831510911" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.777831510911" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -187,11 +187,11 @@ namespace YourNamespace.Infra.Configurations
             builder.Property(x =&gt; x.Field1)
                 .HasMaxLength(100)
                 .IsRequired()
-                .HasColumnName(&quot;credit_card_name&quot;);
+                .HasColumnName(&quot;^field_1&quot;);
 
             builder.Property(x =&gt; x.Field2)                
                 .IsRequired()
-                .HasColumnName(&quot;field_1&quot;);
+                .HasColumnName(&quot;field_2&quot;);
         }
     }
 }</code></pre>
@@ -209,15 +209,7 @@ You choose an <code v-pre>Entity</code> to map to a database. If you dont choose
     </h2>
 </doc-anchor-target>
 <p><strong>1. Ignored Properties:</strong> In this version of BaseKit, you must ignore the properties <code v-pre>Notifications</code>, <code v-pre>Invalid</code>, and <code v-pre>Valid</code> in every entity to prevent errors. This will be fixed in future updates.</p>
-<p><strong>2. Naming Recommendations:</strong> We recommend using lowercase and snake_case for your fields, especially <code v-pre>id</code> and <code v-pre>created_at</code> (inherited from BaseEntity).</p>
-<doc-anchor-target id="explanation">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#explanation">#</doc-anchor-trigger>
-        <span>Explanation</span>
-    </h2>
-</doc-anchor-target>
-<p>In this version of the BaseKit you have to ignore these first three properties in every single entity (<code v-pre>Notifications</code>, Invalid<code v-pre>and</code>Valid&#x60;) or otherwise will throw an error. This will be fixed soon.</p>
-<p>The other thing is that we recommend in this version to put your fields in lowercase and snake_case, mainly <code v-pre>id</code> and <code v-pre>created_at</code> (they come from <code v-pre>BaseEntity</code>).</p>
+<p><strong>2. Naming Recommendations:</strong> We recommend using lowercase and snake_case for your fields, especially <code v-pre>id</code> and <code v-pre>created_at</code> (inherited from <code v-pre>BaseEntity</code>).</p>
 <doc-anchor-target id="fluentapi-methods">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#fluentapi-methods">#</doc-anchor-trigger>

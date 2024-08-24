@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.770084154042">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.777831510911">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.770084154042" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.777831510911" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.770084154042" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.777831510911" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.770084154042" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.770084154042" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.777831510911" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.777831510911" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -162,7 +162,7 @@
         <span>Overview</span>
     </h2>
 </doc-anchor-target>
-<p>The <code v-pre>DotnetBaseKit.Components.Domain.MongoDb</code> part of the DotnetBaseKit architecture, designed to facilitate data management within MongoDb. It offers foundational structures for entities, DTOs, and repositories, aiming to streamline database interactions and maintain consistency across MongoDB functionalities. By adhering to the principles of separation of concerns and repository pattern, this layer promotes code organization, and reusability in MOngoDB operations within the application&#x27;s domain.</p>
+<p>The <code v-pre>DotnetBaseKit.Components.Domain.MongoDb</code> part of the DotnetBaseKit architecture, designed to facilitate data management within MongoDb. It offers foundational structures for entities, DTOs, and repositories, aiming to streamline database interactions and maintain consistency across MongoDb functionalities. By adhering to the principles of separation of concerns and repository pattern, this layer promotes code organization, and reusability in MongoDb operations within the application&#x27;s domain.</p>
 <doc-anchor-target id="installation" class="break-words">
     <h1>
         <doc-anchor-trigger class="header-anchor-trigger" to="#installation">#</doc-anchor-trigger>
@@ -190,10 +190,10 @@
         <span>Usage</span>
     </h2>
 </doc-anchor-target>
-<p>The primary purpose of the <code v-pre>BaseEntity</code> and <code v-pre>BaseDto</code> classes is to serve as foundational structures for entities and DTOs within the SQL domain of the application. By inheriting from these classes, developers can benefit from their validation and notification handling capabilities, ensuring a consistent approach to managing entities and DTOs across SQL-related functionalities.</p>
+<p>The primary purpose of the <code v-pre>BaseEntity</code> and <code v-pre>BaseDto</code> classes is to serve as foundational structures for entities and DTOs within the MongoDb domain of the application. By inheriting from these classes, developers can benefit from their validation and notification handling capabilities, ensuring a consistent approach to managing entities and DTOs across MongoDb-related functionalities.</p>
 <p>For example, consider a scenario where we have an entity named Product representing products in an e-commerce application. We can define the Product entity as follows:</p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-csharp"><code v-pre class="language-csharp">using DotnetBaseKit.Components.Domain.Sql.Entities.Base;
+<pre class="language-csharp"><code v-pre class="language-csharp">using DotnetBaseKit.Components.Domain.MongoDb.Entities.Base;
 
 namespace YourNamespace.Entities
 {
@@ -201,8 +201,8 @@ namespace YourNamespace.Entities
     {
         // constructors
 
-        public string Name { get; private set; }
-        public decimal Price { get; private set; }
+        public string Name { get; private set; } = string.Empty;
+        public decimal Price { get; private set; } = string.Empty;
 
         public override void Validate()
         {
@@ -213,10 +213,10 @@ namespace YourNamespace.Entities
     }
 }</code></pre>
 </doc-codeblock></div>
-<p>In this example, the <code v-pre>Product</code> class inherits from <code v-pre>BaseEntity</code> and implements its Validate() method to perform custom validation logic specific to the Product.</p>
-<p>Similarly, consider a DTO named ProductDto representing product data transferred between layers of the application. We can define the ProductDto class as follows:</p>
+<p>In this example, the <code v-pre>Product</code> class inherits from <code v-pre>BaseEntity</code> and implements its <code v-pre>Validate()</code> method to perform custom validation logic specific to the Product.</p>
+<p>Similarly, consider a DTO named <code v-pre>ProductDto</code> representing product data transferred between layers of the application. We can define the ProductDto class as follows:</p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-csharp"><code v-pre class="language-csharp">using DotnetBaseKit.Components.Domain.Sql.Dtos.Base;
+<pre class="language-csharp"><code v-pre class="language-csharp">using DotnetBaseKit.Components.Domain.MongoDb.Dtos.Base;
 
 namespace YourNamespace.Dtos
 {
@@ -233,8 +233,8 @@ namespace YourNamespace.Dtos
     }
 }</code></pre>
 </doc-codeblock></div>
-<p>In this example, the ProductDto class inherits from BaseDto and implements its Validate() method to perform custom validation logic specific to the ProductDto.</p>
-<p>By utilizing the <code v-pre>BaseEntity</code> and <code v-pre>BaseDto</code> classes in this manner, developers can ensure consistent validation and notification handling within the SQL domain of the application.</p>
+<p>In this example, the <code v-pre>ProductDto</code> class inherits from BaseDto and implements its <code v-pre>Validate()</code> method to perform custom validation logic specific to the <code v-pre>ProductDto</code>.</p>
+<p>By utilizing the <code v-pre>BaseEntity</code> and <code v-pre>BaseDto</code> classes in this manner, developers can ensure consistent validation and notification handling within the MongoDb domain of the application.</p>
 <p>
 <div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
     <div class="flex items-center text-blue-500 dark:text-blue-400">
@@ -255,7 +255,7 @@ namespace YourNamespace.Dtos
         <span>Repository Pattern</span>
     </h2>
 </doc-anchor-target>
-<p>The <code v-pre>DotnetBaseKit.Components.Domain.MongoDB</code> also provides interfaces for read and write repositories, <code v-pre>IBaseReadRepository</code> and <code v-pre>IBaseWriteRepository</code>. These interfaces define the methods required for data access operations, adhering to the repository pattern. This pattern helps in encapsulating the data access logic and promotes a cleaner separation of concerns for MongoDB.</p>
+<p>The <code v-pre>DotnetBaseKit.Components.Domain.MongoDb</code> also provides interfaces for read and write repositories, <code v-pre>IBaseReadRepository</code> and <code v-pre>IBaseWriteRepository</code>. These interfaces define the methods required for data access operations, adhering to the repository pattern. This pattern helps in encapsulating the data access logic and promotes a cleaner separation of concerns for MongoDb.</p>
 <p>Create a Write / Read Repository Interface:</p>
 <div class="codeblock-wrapper"><doc-codeblock line-numbers>
 <pre class="language-csharp"><code v-pre class="language-csharp">using DotnetBaseKit.Components.Domain.MongoDb.Repositories.Base;
@@ -280,7 +280,7 @@ namespace YourNamespace.Domain.Repositories
 }</code></pre>
 </doc-codeblock></div>
 <p>PS: Do not confuse <code v-pre>IBaseWriteRepository</code> from <code v-pre>Domain.Sql</code> with <code v-pre>IBaseWriteRepository</code> from <code v-pre>Domain.MongoDb</code>. <code v-pre>IBaseWriteRepository</code> from <code v-pre>Domain.Sql</code>  is from <code v-pre>DotnetBaseKit.Components.Domain.Sql.Repositories.Base</code>namespace and <code v-pre>IBaseWriteRepository</code> from <code v-pre>Domain.MongoDb</code> is from <code v-pre>DotnetBaseKit.Components.Domain.MongoDb.Repositories.Base</code> namespace. In future releases this will be fixed too for clear understanding.</p>
-<p>You can see the fully usage of the repository in <a href="../infra-mongodb/#usage">Infra.MongoDB</a> or in the <a href="../../how-to-use/fully-example-mongodb">Fully Usage Example for MongoDB</a></p>
+<p>You can see the fully usage of the repository in <a href="../infra-mongodb/#usage">Infra.MongoDb</a> or in the <a href="../../how-to-use/fully-example-mongodb">Fully Usage Example for MongoDb</a></p>
 
                                 
                                 <!-- Required only on API pages -->
