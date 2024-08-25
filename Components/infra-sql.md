@@ -139,12 +139,12 @@ To use the your repository in your application, register it in the dependency in
 
 ```csharp #
 using Microsoft.Extensions.DependencyInjection;
-using TestApi.Domain.Repositories;
+using YourNamespace.Domain.Repositories;
 using YourNamespace.Infra;
 
 namespace YourNamespace
 {
-    public static class ServiceExtensions
+    public static class RepositoryExtensions
     {
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
